@@ -39,6 +39,7 @@
             </div>
           <% end %>
         </div>
+        <%= action_cable_meta_tag %>
         <div class="collapse navbar-collapse">
           <% if logged_in? %>
             <%= render "layouts/menu_admin" %>

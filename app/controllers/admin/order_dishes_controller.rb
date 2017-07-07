@@ -32,14 +32,14 @@ class Admin::OrderDishesController < ApplicationController
     params_update = order_dish_params
     if @order_dish.update_attributes params_update
       flash[:success] = t "admin_order.success_update"
-      redirect_to admin_order_path @support.load_data[:order]
-      if params_update[:status] != 0
+      if params_update[:status] != "no_need"
         ActionCable.server.broadcast "messages",
           from_role: current_admin.admin_role,
-          combo: @order_dish.combo.name,
-          table: @order_dish.order.table.code
-        head :ok
+          dish: @order_dish.dish.name,
+          table: @order_dish.order.table.code,
+          status: @order_dish.status
       end
+      redirect_to admin_order_path @support.load_data[:order]
     else
       redirect_to edit_admin_order_order_dish_path
     end

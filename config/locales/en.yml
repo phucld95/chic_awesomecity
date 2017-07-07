@@ -449,6 +449,13 @@ en:
     to: Outside
     available: Available
     used: Used
+    no_need: No need
+    needing: Needing
+    cooking: Cooking
+    cooked: Cooked
+    served: Served
+    cancel: Cancel
+    choose_status: Choose Status
   reserve:
     quantity: Please choose capacity
     table: Please select prefer table
@@ -528,7 +535,7 @@ en:
     success_delete: "Delete successfully!"
     something_wrong: "Something wrong!"
     order_dish: Order Dish
-    order_dish: Order Combo
+    order_combo: Order Combo
     original_price: Original Price
     voucher_add: Add Voucher
     discount_code: Discount Code
